@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vivid Karma — java stats cli</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>◈ vivid karma</h1><nav class="lang"><button data-lang="en" class="on">EN</button><button data-lang="de">DE</button></nav></header>
+<main><div class="sd">
+<section class="card"><h2 data-i="about">about</h2><p data-i="abouttext"></p>
+<p class="run"><code data-i="runlabel"></code> <code class="cmd">javac Main.java &amp;&amp; java Main</code></p>
+<h2 data-i="source">source — Main.java</h2><pre class="code">public class Main {
+  public static void main(String[] a) {
+    double[] d = {12.5,7.0,23.75,4.5,18.0,9.25,31.0};
+    double sum=0, min=d[0], max=d[0];
+    for (double v : d) { sum+=v; min=Math.min(min,v); max=Math.max(max,v); }
+    System.out.printf("count : %d%n", d.length);
+    System.out.printf("sum   : %.2f%n", sum);
+    System.out.printf("mean  : %.2f%n", sum/d.length);
+    System.out.printf("min   : %.2f%n", min);
+    System.out.printf("max   : %.2f%n", max);
+  }
+}</pre></section>
+<section class="card"><h2 data-i="output">sample output</h2><pre class="out">count : 7
+sum   : 106.00
+mean  : 15.14
+min   : 4.50
+max   : 31.00</pre>
+<h2 data-i="why">why java?</h2><p data-i="whytext"></p>
+<h2 data-i="features">features</h2><ul id="flist"></ul></section>
+</div></main><script src="app.js"></script></body></html>
